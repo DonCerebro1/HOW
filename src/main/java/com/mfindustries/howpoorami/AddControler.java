@@ -1,4 +1,4 @@
-package com.mfindustries.howpoorami.add;
+package com.mfindustries.howpoorami;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +16,27 @@ public class AddControler {
 
     public void switchToMainScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToEditScene(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("editScene.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToContactScene(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("contactScene.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToAboutScene(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("aboutScene.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
